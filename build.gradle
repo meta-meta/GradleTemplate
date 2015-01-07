@@ -55,7 +55,3 @@ task setup << {
 		cloneRepo it
 	}
 }
-
-task yo << {
-	println 'includes' + gradle.gitDependencies
-}
