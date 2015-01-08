@@ -1,10 +1,11 @@
 rootProject.name = 'GradleTemplate'
 
 gradle.ext.gitDependencies = [
-	[cloneTo:'../OSC', uri:'https://github.com/meta-meta/OSC.git', checkout:'8589b79ceb']
+	[cloneTo:'../OSC', uri:'https://github.com/meta-meta/OSC.git', checkout:'8589b79ceb'],
+	[cloneTo:'../processing', uri:'https://github.com/meta-meta/processing.git', subPath:'/core']
 ]
 
 def includes = []
-gradle.ext.gitDependencies.each() { includes << it.cloneTo }
+gradle.ext.gitDependencies.each() { includes << it.cloneTo + (it.subPath ? it.subPath : '') }
 
 include (includes as String[])

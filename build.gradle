@@ -23,6 +23,7 @@ repositories {
 
 dependencies {
     compile 'org.scala-lang:scala-library:2.11.4'
+    compile project (':../processing/core')
 }
 
 sourceCompatibility = 1.7
