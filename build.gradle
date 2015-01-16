@@ -33,6 +33,11 @@ task wrapper(type: Wrapper) {
 	gradleVersion = '2.2.1'
 }
 
+idea {
+	module {
+		name = 'GradleTemplate'
+	}
+}
 
 def cloneRepo(repo) {
 	def cloneTo = file(repo.cloneTo)
